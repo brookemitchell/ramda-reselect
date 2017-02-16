@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape 'tests/**/*.js'"
   },
   "repository": "git+https://github.com/brookemitchell/ramda-reselect.git",
   "author": "bmitchell <mitchell.brooke@gmail.com>",
@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/brookemitchell/ramda-reselect/issues"
   },
-  "homepage": "https://github.com/brookemitchell/ramda-reselect#readme"
+  "homepage": "https://github.com/brookemitchell/ramda-reselect#readme",
+  "dependencies": {
+    "tape": "^4.6.3"
+  }
 }

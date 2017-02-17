@@ -6,7 +6,7 @@ const taxPercentSelector = state => state.shop.taxPercent
 
 const subtotalSelector = createSelector(
   shopItemsSelector,
-  items => items.reduce((acc, item) => acc + item.value, 0)
+    items => items.reduce((acc, item) => acc + item.value, 0)
 )
 
 const taxSelector = createSelector(
@@ -31,8 +31,12 @@ const exampleState = {
   }
 }
 
-console.log(subtotalSelector(exampleState)) // 2.15
-console.log(taxSelector(exampleState))      // 0.172
-console.log(totalSelector(exampleState))    // { total: 2.322 }
+test('test 1', t => {
+    t.plan(3)
+    t.equal(subtotalSelector(exampleState), 2.15)
+    t.equal(taxSelector(exampleState), 0.172)
+    t.deepEqual(totalSelector(exampleState), { total: 2.322 })
+})
+
 
 

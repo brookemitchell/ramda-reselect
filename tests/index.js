@@ -1,5 +1,5 @@
 const test = require('tape')
-const { createSelector } = require('../index.js')
+const createSelector  = require('../index.js')
 
 const shopItemsSelector = state => state.shop.items
 const taxPercentSelector = state => state.shop.taxPercent

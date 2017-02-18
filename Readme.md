@@ -3,11 +3,23 @@
 ## Purpose ##
 
 - Implementation of the reselect react library using ramda.
-- A number of examples of how to recreate entries from the reselect library will be given.
-- A small library that implements this for the lazy.
+- Examples of how to recreate your own reselect library.
+- A small tree-shaken exact implementation of createSelector for lazy folks like me :cat:.
 
+## How-to ##
+The same createSelector as used by [reselect](https://github.com/reactjs/reselect) can be created with Ramda like so, nice and easy :sweat_smile: :
 ``` javascript
-import { createSelector } from 'ramda-reselect'
+createSelector = (...fns) => 
+  R.pipe(
+    R.of
+    , R.ap(fns.slice(0, -1))
+    , R.apply(R.memoize(fns[fns.length - 1])))
+```
+A convenience version of createSelector is provided as a tree-shook package. But why not write a 'createSelector' to suit your use case. :dizzy:
+
+## Example ##
+``` javascript
+import createSelector from 'ramda-reselect'
 
 const shopItemsSelector = state => state.shop.items
 const taxPercentSelector = state => state.shop.taxPercent

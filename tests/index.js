@@ -70,6 +70,7 @@ test('basic selector invalid input selector', t => {
     ), /input-selectors to be functions.*function, string/)
 })
 
+/*
 // TODO: Add test for React Redux connect function
 
 // import chai from 'chai'
@@ -79,7 +80,6 @@ test('basic selector invalid input selector', t => {
 // const assert = chai.assert
 
 
-    /* 
   test('memoized composite arguments', () => {
     const selector = createSelector(
       state => state.sub,

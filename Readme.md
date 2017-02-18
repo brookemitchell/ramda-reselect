@@ -1,6 +1,5 @@
 #  Ramda - Reselect #
-
-## Implementation of the reselect library using ramda. ##
+Implementation of the reselect library using ramda.
 
 ## Purpose ##
 - Example of how to recreate your own selector abstraction using ramda.

@@ -1,9 +1,9 @@
 #  Ramda - Reselect #
 
-## Purpose ##
+## Implementation of the reselect library using ramda. ##
 
-- Implementation of the reselect react library using ramda.
-- Examples of how to recreate your own reselect library.
+## Purpose ##
+- Example of how to recreate your own selector abstraction using ramda.
 - A small tree-shaken exact implementation of createSelector for lazy folks like me :cat:.
 
 ## How-to ##

@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/brookemitchell/ramda-reselect#readme",
   "dependencies": {
-    "ramda": "^0.23.0"
+    "ramda": "^0.23.0",
+    "sanctuary": "^0.12.1"
   },
   "devDependencies": {
     "tape": "^4.6.3"

@@ -3,7 +3,7 @@ Implementation of the reselect library using ramda.
 
 ## Purpose ##
 - Example of how to recreate your own selector abstraction using ramda.
-- A small tree-shaken exact implementation of createSelector for lazy folks like me :cat:.
+- A small implementation of createSelector for lazy folks like me :cat:.
 
 ## How-to ##
 The same createSelector as used by [reselect](https://github.com/reactjs/reselect) can be created with Ramda like so, nice and easy :sweat_smile: :
@@ -14,7 +14,7 @@ createSelector = (...fns) =>
     , R.ap(fns.slice(0, -1))
     , R.apply(R.memoize(fns[fns.length - 1])))
 ```
-A convenience version of createSelector is provided as a tree-shook package. But why not write a 'createSelector' to suit your use case. :dizzy:
+A convenience version of createSelector is provided as a package. But why not write a 'createSelector' to suit your use case. :dizzy:
 
 ## Example ##
 ``` javascript

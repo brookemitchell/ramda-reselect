@@ -87,18 +87,17 @@ test('first argument can be an array', t => {
   t.equal(selector({ a: 3, b: 2 }), 5)
 })
 
-test.skip('can accept props', t => {
-    let called = 0
-    const selector = createSelector(
-        state => state.a,
-        state => state.b,
-        (state, props) => props.c,
-        (a, b, c) => {
-            called++
-            return a + b + c
-        }
-    )
-    t.equal(selector({ a: 1, b: 2 }, { c: 100 }), 103)
+test('can accept props', t => {
+  t.plan(1)
+  const selector = createSelector(
+    state => state.a,
+    state => state.b,
+    (state, props) => console.log(state, props) || props.c,
+    (a, b, c) => {
+      return a + b + c
+    }
+  )
+  t.equal(selector({ a: 1, b: 2 }, { c: 100 }), 103)
 })
 
 /*

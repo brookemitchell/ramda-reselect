@@ -21,5 +21,8 @@ module.exports = (...fns) => (state, props) => {
 
   const lastFn = memoize(fns[fns.length - 1]);
 
-  return pipe(of, ap(preFns), apply(lastFn))([state, props]);
+  return pipe(of
+              , ap(preFns)
+              , apply(lastFn)
+             )([state, props]);
 };

@@ -1,10 +1,11 @@
 {
   "name": "ramda-reselect",
   "version": "1.2.0",
-  "description": "",
+  "description": "Implementation of the reselect library using ramda. ",
   "main": "index.js",
   "scripts": {
-    "test": "tape 'tests/**/*.js' "
+    "test": "tape 'tests/**/*.js' | faucet",
+    "commit": "git-cz"
   },
   "repository": "git+https://github.com/brookemitchell/ramda-reselect.git",
   "author": "bmitchell <mitchell.brooke@gmail.com>",
@@ -18,7 +19,21 @@
     "sanctuary": "^0.12.1"
   },
   "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "faucet": "0.0.1",
     "tape": "^4.6.3"
+  },
+  "keywords": [
+    "functional",
+    "redux",
+    "reselect",
+    "react",
+    "selectors"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

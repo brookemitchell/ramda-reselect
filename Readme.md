@@ -1,4 +1,6 @@
-#  Ramda - Reselect #
+Ramda - Reselect
+================
+
 Implementation of the reselect library using ramda.
 
 ## Purpose ##
@@ -8,13 +10,13 @@ Implementation of the reselect library using ramda.
 ## How-to ##
 The same createSelector as used by [reselect](https://github.com/reactjs/reselect) can be created with Ramda like so, nice and easy :sweat_smile: :
 ``` javascript
-createSelector = (...fns) => 
+const createSelector = (...fns) => 
   R.pipe(
     R.of
     , R.ap(fns.slice(0, -1))
     , R.apply(R.memoize(fns[fns.length - 1])))
 ```
-A convenience version of createSelector is provided as a package. But why not write a 'createSelector' to suit your use case. :dizzy:
+Right now that can't handle props, but tbh I never use props in my stateful components. Perhaps you do, so a convenience version of createSelector is provided as a package. But why not write a 'createSelector' to suit your use case. :dizzy:
 
 ## Example ##
 ``` javascript

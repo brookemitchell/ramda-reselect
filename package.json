@@ -1,7 +1,7 @@
 {
   "name": "ramda-reselect",
   "version": "1.2.0",
-  "description": "Implementation of the reselect library using ramda. ",
+  "description": "Implementation of the reselect library using ramda.",
   "main": "index.js",
   "scripts": {
     "test": "tape 'tests/**/*.js' | faucet",
@@ -15,8 +15,8 @@
   },
   "homepage": "https://github.com/brookemitchell/ramda-reselect#readme",
   "dependencies": {
-    "ramda": "^0.23.0",
-    "sanctuary": "^0.12.1"
+    "ramda": "^0.25.0",
+    "ramda-extension": "^0.3.1"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",

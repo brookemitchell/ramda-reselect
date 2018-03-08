@@ -184,7 +184,7 @@ test.skip('memoizes previous result before exception', t => {
     t.equal(selector2(state2, { x: 100, y: 201 }), 303)
   })
 
-  // should we accept variadic args? 
+  // should we accept variadic args?
   // or error
   test.skip('chained selector with variadic args', t => {
     t.plan(3)
